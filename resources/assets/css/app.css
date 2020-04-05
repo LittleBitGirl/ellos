@@ -1,0 +1,9 @@
+.bigger-logo {
+    width: 220px!important;
+    height: 47px!important;
+    margin-bottom: -13px;
+}
+.header .header-top div.left-content ul.logo-container li img{
+    max-width: 220px!important;
+    max-height: 50px!important;
+}

@@ -182,7 +182,6 @@ class ProductController extends Controller
         $categories = $this->categoryRepository->getCategoryTree();
 
         $inventorySources = $this->inventorySourceRepository->all();
-
         return view($this->_config['view'], compact('product', 'categories', 'inventorySources'));
     }
 
@@ -196,7 +195,6 @@ class ProductController extends Controller
     public function update(ProductForm $request, $id)
     {
         $product = $this->productRepository->update(request()->all(), $id);
-
         session()->flash('success', trans('admin::app.response.update-success', ['name' => 'Product']));
 
         return redirect()->route($this->_config['redirect']);

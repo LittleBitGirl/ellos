@@ -171,7 +171,6 @@
             </div>
 
         </form>
-
         {!! view_render_event('bagisto.admin.catalog.product.edit.after', ['product' => $product]) !!}
     </div>
 @stop

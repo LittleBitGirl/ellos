@@ -4,7 +4,7 @@ namespace Webkul\Product\Helpers;
 
 use Webkul\Attribute\Repositories\AttributeOptionRepository as AttributeOption;
 use Webkul\Product\Models\Product;
-use Webkul\Product\Models\ProductAttributeValue;
+use Webkul\Product\Models\AchievementAttributeValue;
 
 /**
  * Configurable Option Helper
@@ -117,7 +117,7 @@ class ConfigurableOption extends AbstractProduct
         $allowAttributes = $this->getAllowAttributes($currentProduct);
 
         foreach ($allowedProducts as $product) {
-            if ($product instanceof \Webkul\Product\Models\ProductFlat) {
+            if ($product instanceof \Webkul\Product\Models\AchievementFlat) {
                 $productId = $product->product_id;
             } else {
                 $productId = $product->id;
@@ -128,7 +128,7 @@ class ConfigurableOption extends AbstractProduct
 
                 $attributeValue = $product->{$productAttribute->code};
 
-                if ($attributeValue == '' && $product instanceof \Webkul\Product\Models\ProductFlat)
+                if ($attributeValue == '' && $product instanceof \Webkul\Product\Models\AchievementFlat)
                     $attributeValue = $product->product->{$productAttribute->code};
 
                 $options[$productAttributeId][$attributeValue][] = $productId;
@@ -212,7 +212,7 @@ class ConfigurableOption extends AbstractProduct
         $prices = [];
 
         foreach ($this->getAllowedProducts($product) as $variant) {
-            if ($variant instanceof \Webkul\Product\Models\ProductFlat) {
+            if ($variant instanceof \Webkul\Product\Models\AchievementFlat) {
                 $variantId = $variant->product_id;
             } else {
                 $variantId = $variant->id;
@@ -235,7 +235,7 @@ class ConfigurableOption extends AbstractProduct
         $images = [];
 
         foreach ($this->getAllowedProducts($product) as $variant) {
-            if ($variant instanceof \Webkul\Product\Models\ProductFlat) {
+            if ($variant instanceof \Webkul\Product\Models\AchievementFlat) {
                 $variantId = $variant->product_id;
             } else {
                 $variantId = $variant->id;

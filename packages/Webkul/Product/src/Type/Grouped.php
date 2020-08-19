@@ -3,14 +3,14 @@
 namespace Webkul\Product\Type;
 
 use Webkul\Attribute\Repositories\AttributeRepository;
-use Webkul\Product\Repositories\ProductRepository;
+use Webkul\Product\Repositories\AchievementRepository;
 use Webkul\Product\Repositories\ProductAttributeValueRepository;
 use Webkul\Product\Repositories\ProductInventoryRepository;
 use Webkul\Product\Repositories\ProductImageRepository;
 use Webkul\Product\Repositories\ProductGroupedProductRepository;
 use Webkul\Product\Helpers\ProductImage;
-use Webkul\Product\Models\ProductAttributeValue;
-use Webkul\Product\Models\ProductFlat;
+use Webkul\Product\Models\AchievementAttributeValue;
+use Webkul\Product\Models\AchievementFlat;
 
 /**
  * Class Grouped.
@@ -68,7 +68,7 @@ class Grouped extends AbstractType
      */
     public function __construct(
         AttributeRepository $attributeRepository,
-        ProductRepository $productRepository,
+        AchievementRepository $productRepository,
         ProductAttributeValueRepository $attributeValueRepository,
         ProductInventoryRepository $productInventoryRepository,
         ProductImageRepository $productImageRepository,

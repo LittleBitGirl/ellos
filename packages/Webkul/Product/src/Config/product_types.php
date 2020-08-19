@@ -16,7 +16,7 @@ return [
     'virtual' => [
         'key' => 'virtual',
         'name' => 'Virtual',
-        'class' => 'Webkul\Product\Type\Virtual',
+        'class' => 'Webkul\Product\Type\Number',
         'sort' => 3
     ],
     'grouped' => [

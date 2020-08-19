@@ -1,7 +1,7 @@
 <?php
 
-use Webkul\Product\Models\ProductAttributeValue;
-use Webkul\Product\Models\ProductFlat;
+use Webkul\Product\Models\AchievementAttributeValue;
+use Webkul\Product\Models\AchievementFlat;
 
 use Webkul\CartRule\Models\CartRule;
 use Haendlerbund\SalesforceApi\Models\HbCartRule;

@@ -25,7 +25,7 @@ class View extends AbstractProduct
         $attributeOptionReposotory = app('Webkul\Attribute\Repositories\AttributeOptionRepository');
 
         foreach ($attributes as $attribute) {
-            if ($product instanceof \Webkul\Product\Models\ProductFlat) {
+            if ($product instanceof \Webkul\Product\Models\AchievementFlat) {
                 $value = $product->product->{$attribute->code};
             } else {
                 $value = $product->{$attribute->code};

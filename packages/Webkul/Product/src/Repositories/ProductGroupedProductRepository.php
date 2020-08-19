@@ -3,7 +3,7 @@
 namespace Webkul\Product\Repositories;
 
 use Webkul\Core\Eloquent\Repository;
-use Webkul\Product\Repositories\ProductRepository;
+use Webkul\Product\Repositories\AchievementRepository;
 use Illuminate\Support\Str;
 
 /**

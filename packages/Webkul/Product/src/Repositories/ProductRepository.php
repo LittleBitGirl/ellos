@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Webkul\Attribute\Repositories\AttributeRepository;
 use Webkul\Core\Eloquent\Repository;
 use Webkul\Product\Repositories\ProductFlatRepository;
-use Webkul\Product\Models\ProductAttributeValue;
+use Webkul\Product\Models\AchievementAttributeValue;
 
 /**
  * Product Repository
@@ -173,7 +173,7 @@ class ProductRepository extends Repository
 
                                 $qb = $qb->leftJoin('product_attribute_values as ' . $aliasTemp, $table . '.id', '=', $aliasTemp . '.product_id');
 
-                                $column = ProductAttributeValue::$attributeTypeFields[$attribute->type];
+                                $column = AchievementAttributeValue::$attributeTypeFields[$attribute->type];
 
                                 $temp = explode(',', request()->get($attribute->code));
 

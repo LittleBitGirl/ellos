@@ -241,7 +241,7 @@
                     <tbody>
                         @foreach ($order->items as $item)
                             <tr>
-                                <td>{{ Webkul\Product\Helpers\ProductType::hasVariants($item->type) ? $item->child->sku : $item->sku }}</td>
+                                <td>{{ Webkul\Product\Helpers\AchievementType::hasVariants($item->type) ? $item->child->sku : $item->sku }}</td>
 
                                 <td>
                                     {{ $item->name }}

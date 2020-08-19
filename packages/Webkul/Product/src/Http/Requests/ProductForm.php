@@ -5,9 +5,9 @@ namespace Webkul\Product\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 use Webkul\Attribute\Repositories\AttributeFamilyRepository as AttributeFamily;
-use Webkul\Product\Repositories\ProductRepository as Product;
+use Webkul\Product\Repositories\AchievementRepository as Product;
 use Webkul\Product\Repositories\ProductAttributeValueRepository as AttributeValue;
-use Webkul\Product\Models\ProductAttributeValue;
+use Webkul\Product\Models\AchievementAttributeValue;
 
 class ProductForm extends FormRequest
 {
@@ -102,7 +102,7 @@ class ProductForm extends FormRequest
 
             if ($attribute->is_unique) {
                 array_push($validations, function ($field, $value, $fail) use ($attribute) {
-                    $column = ProductAttributeValue::$attributeTypeFields[$attribute->type];
+                    $column = AchievementAttributeValue::$attributeTypeFields[$attribute->type];
 
                     if (! $this->attributeValue->isValueUnique($this->id, $attribute->id, $column, request($attribute->code)))
                         $fail('The :attribute has already been taken.');

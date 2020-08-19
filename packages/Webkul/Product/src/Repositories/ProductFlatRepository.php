@@ -14,7 +14,7 @@ class ProductFlatRepository extends Repository
 {
     public function model()
     {
-        return 'Webkul\Product\Contracts\ProductFlat';
+        return 'Webkul\Product\Contracts\AchievementFlat';
     }
 
     /**

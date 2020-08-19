@@ -2,7 +2,7 @@
 
 namespace Webkul\Product\Helpers;
 
-use Webkul\Product\Repositories\ProductRepository as Product;
+use Webkul\Product\Repositories\AchievementRepository as Product;
 use Webkul\Attribute\Repositories\AttributeFamilyRepository as AttributeFamily;
 use Illuminate\Support\Str;
 

@@ -6,7 +6,7 @@ use Webkul\Checkout\Repositories\CartRepository;
 use Webkul\Checkout\Repositories\CartItemRepository;
 use Webkul\Checkout\Repositories\CartAddressRepository;
 use Webkul\Customer\Models\CustomerAddress;
-use Webkul\Product\Repositories\ProductRepository;
+use Webkul\Product\Repositories\AchievementRepository;
 use Webkul\Tax\Helpers\Tax;
 use Webkul\Tax\Repositories\TaxCategoryRepository;
 use Webkul\Checkout\Models\CartItem;
@@ -94,7 +94,7 @@ class Cart
         CartRepository $cartRepository,
         CartItemRepository $cartItemRepository,
         CartAddressRepository $cartAddressRepository,
-        ProductRepository $productRepository,
+        AchievementRepository $productRepository,
         TaxCategoryRepository $taxCategoryRepository,
         WishlistRepository $wishlistRepository,
         CustomerAddressRepository $customerAddressRepository

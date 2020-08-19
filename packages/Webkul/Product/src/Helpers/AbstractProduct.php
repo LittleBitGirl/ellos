@@ -2,9 +2,9 @@
 
 namespace Webkul\Product\Helpers;
 
-use Webkul\Product\Models\ProductAttributeValue;
+use Webkul\Product\Models\AchievementAttributeValue;
 use Webkul\Product\Models\ProductFlatProxy;
-use Webkul\Product\Models\ProductFlat;
+use Webkul\Product\Models\AchievementFlat;
 
 /**
  * Abstract Product Helper
@@ -62,7 +62,7 @@ abstract class AbstractProduct
         if (array_key_exists($product->id, $this->productFlat))
             return;
 
-        if (! $product instanceof ProductFlat) {
+        if (! $product instanceof AchievementFlat) {
             $this->productFlat[$product->id] = ProductFlatProxy::modelClass()
                 ::where('product_flat.product_id', $product->id)
                 ->where('product_flat.locale', app()->getLocale())

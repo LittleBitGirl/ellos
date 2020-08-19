@@ -5,7 +5,7 @@ namespace Webkul\Product\Repositories;
 use Illuminate\Container\Container as App;
 use Webkul\Attribute\Repositories\AttributeRepository;
 use Webkul\Core\Eloquent\Repository;
-use Webkul\Product\Models\ProductAttributeValue;
+use Webkul\Product\Models\AchievementAttributeValue;
 
 /**
  * Product Attribute Value Reposotory
@@ -45,7 +45,7 @@ class ProductAttributeValueRepository extends Repository
      */
     function model()
     {
-        return 'Webkul\Product\Contracts\ProductAttributeValue';
+        return 'Webkul\Product\Contracts\AchievementAttributeValue';
     }
 
     /**
@@ -63,7 +63,7 @@ class ProductAttributeValueRepository extends Repository
         if (! $attribute)
             return;
 
-        $data[ProductAttributeValue::$attributeTypeFields[$attribute->type]] = $data['value'];
+        $data[AchievementAttributeValue::$attributeTypeFields[$attribute->type]] = $data['value'];
 
         return $this->model->create($data);
     }

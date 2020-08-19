@@ -3,7 +3,7 @@
 namespace Webkul\Velocity\Http\Controllers\Admin;
 
 use Illuminate\Http\Response;
-use Webkul\Product\Repositories\ProductRepository;
+use Webkul\Product\Repositories\AchievementRepository;
 use Webkul\Velocity\Repositories\ContentRepository;
 
 /**
@@ -32,12 +32,12 @@ class ContentController extends Controller
     /**
      * Create a new controller instance.
      *
-     * @param \Webkul\Product\Repositories\ProductRepository $productRepository;
+     * @param \Webkul\Product\Repositories\AchievementRepository $productRepository;
      * @param \Webkul\Velocity\Repositories\ContentRepository $content;
      * @return void
      */
     public function __construct(
-        ProductRepository $productRepository,
+        AchievementRepository $productRepository,
         ContentRepository $content
     ) {
         $this->productRepository = $productRepository;
@@ -124,7 +124,7 @@ class ContentController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Webkul\Product\Http\Requests\ProductForm $request
+     * @param  \Webkul\Product\Http\Requests\AchievementForm $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */

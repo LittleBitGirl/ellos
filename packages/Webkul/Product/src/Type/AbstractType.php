@@ -5,11 +5,11 @@ namespace Webkul\Product\Type;
 use Illuminate\Support\Facades\Storage;
 use phpDocumentor\Reflection\Types\Boolean;
 use Webkul\Attribute\Repositories\AttributeRepository;
-use Webkul\Product\Repositories\ProductRepository;
+use Webkul\Product\Repositories\AchievementRepository;
 use Webkul\Product\Repositories\ProductAttributeValueRepository;
 use Webkul\Product\Repositories\ProductInventoryRepository;
 use Webkul\Product\Repositories\ProductImageRepository;
-use Webkul\Product\Models\ProductAttributeValue;
+use Webkul\Product\Models\AchievementAttributeValue;
 use Webkul\Product\Helpers\ProductImage;
 use Cart;
 
@@ -31,7 +31,7 @@ abstract class AbstractType
     /**
      * ProductRepository instance
      *
-     * @var ProductRepository
+     * @var AchievementRepository
      */
     protected $productRepository;
 
@@ -132,7 +132,7 @@ abstract class AbstractType
      */
     public function __construct(
         AttributeRepository $attributeRepository,
-        ProductRepository $productRepository,
+        AchievementRepository $productRepository,
         ProductAttributeValueRepository $attributeValueRepository,
         ProductInventoryRepository $productInventoryRepository,
         ProductImageRepository $productImageRepository,
@@ -219,7 +219,7 @@ abstract class AbstractType
                 ]);
             } else {
                 $this->attributeValueRepository->update([
-                    ProductAttributeValue::$attributeTypeFields[$attribute->type] => $data[$attribute->code]
+                    AchievementAttributeValue::$attributeTypeFields[$attribute->type] => $data[$attribute->code]
                     ], $attributeValue->id
                 );
 

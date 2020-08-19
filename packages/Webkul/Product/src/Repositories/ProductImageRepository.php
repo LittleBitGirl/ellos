@@ -21,7 +21,7 @@ class ProductImageRepository extends Repository
      */
     function model()
     {
-        return 'Webkul\Product\Contracts\ProductImage';
+        return 'Webkul\Product\Contracts\AchievementImage';
     }
 
     /**

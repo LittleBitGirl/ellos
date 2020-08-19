@@ -3,15 +3,15 @@
 <?php
 
 $categories = [];
-//dd(app('Webkul\Category\Repositories\CategoryRepository')->getVisibleCategoryTree(core()->getCurrentChannel()->root_category_id));
-foreach (app('Webkul\Category\Repositories\CategoryRepository')->getVisibleCategoryTree(core()->getCurrentChannel()->root_category_id) as $category) {
+foreach (app('Webkul\Category\Repositories\CategoryRepository')->getVisibleCategoryTree() as $category) {
     if ($category->slug)
         array_push($categories, $category);
 }
 
 ?>
 
-<category-nav categories='@json($categories)' url="{{url()->to('/')}}"></category-nav>
+<category-nav categories='@json($categories)' url="{{'/page/'}}"></category-nav>
+
 
 {!! view_render_event('bagisto.shop.layout.header.category.after') !!}
 
@@ -21,7 +21,7 @@ foreach (app('Webkul\Category\Repositories\CategoryRepository')->getVisibleCateg
 
 <script type="text/x-template" id="category-nav-template">
 
-    <ul class="nav">
+    <ul class="nav category-nav d-flex justify-content-between">
         <category-item
             v-for="(item, index) in items"
             :key="index"
@@ -66,7 +66,7 @@ foreach (app('Webkul\Category\Repositories\CategoryRepository')->getVisibleCateg
 
 <script type="text/x-template" id="category-item-template">
     <li>
-        <a :href="url+'/'+this.item['translations'][0].url_path">
+        <a class="category-nav-link" :href="url+this.item['translations'][1].slug">
             @{{ name }}&emsp;
             <i class="icon dropdown-right-icon" v-if="haveChildren && item.parent_id != null"></i>
         </a>

@@ -10,7 +10,7 @@ use Webkul\Attribute\Models\AttributeOption;
 use Webkul\Core\Helpers\Laravel5Helper;
 use Webkul\Core\Models\Locale;
 use Webkul\Product\Models\Product;
-use Webkul\Product\Models\ProductAttributeValue;
+use Webkul\Product\Models\AchievementAttributeValue;
 
 class ProductCest
 {
@@ -119,7 +119,7 @@ class ProductCest
             'attribute_family_id' => $attributeFamily->id,
         ]);
 
-        $I->seeRecord(ProductAttributeValue::class, [
+        $I->seeRecord(AchievementAttributeValue::class, [
             'product_id'    => $product->id,
             'attribute_id'  => $this->attributeBrand->id,
             'integer_value' => $this->attributeBrandDefaultOption->id,

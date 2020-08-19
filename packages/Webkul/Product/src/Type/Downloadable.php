@@ -3,7 +3,7 @@
 namespace Webkul\Product\Type;
 
 use Webkul\Attribute\Repositories\AttributeRepository;
-use Webkul\Product\Repositories\ProductRepository;
+use Webkul\Product\Repositories\AchievementRepository;
 use Webkul\Product\Repositories\ProductAttributeValueRepository;
 use Webkul\Product\Repositories\ProductInventoryRepository;
 use Webkul\Product\Repositories\ProductImageRepository;
@@ -76,7 +76,7 @@ class Downloadable extends AbstractType
      */
     public function __construct(
         AttributeRepository $attributeRepository,
-        ProductRepository $productRepository,
+        AchievementRepository $productRepository,
         ProductAttributeValueRepository $attributeValueRepository,
         ProductInventoryRepository $productInventoryRepository,
         productImageRepository $productImageRepository,

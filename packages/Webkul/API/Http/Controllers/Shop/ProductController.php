@@ -4,7 +4,7 @@ namespace Webkul\API\Http\Controllers\Shop;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Webkul\Product\Repositories\ProductRepository;
+use Webkul\Product\Repositories\AchievementRepository;
 use Webkul\API\Http\Resources\Catalog\Product as ProductResource;
 
 /**
@@ -28,7 +28,7 @@ class ProductController extends Controller
      * @param  Webkul\Product\Repositories\ProductRepository $productRepository
      * @return void
      */
-    public function __construct(ProductRepository $productRepository)
+    public function __construct(AchievementRepository $productRepository)
     {
         $this->productRepository = $productRepository;
     }

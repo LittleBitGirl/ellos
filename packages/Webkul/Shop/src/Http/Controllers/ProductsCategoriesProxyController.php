@@ -5,7 +5,7 @@ namespace Webkul\Shop\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Webkul\Category\Repositories\CategoryRepository;
-use Webkul\Product\Repositories\ProductRepository;
+use Webkul\Product\Repositories\AchievementRepository;
 
 class ProductsCategoriesProxyController extends Controller
 {
@@ -19,7 +19,7 @@ class ProductsCategoriesProxyController extends Controller
     /**
      * ProductRepository object
      *
-     * @var ProductRepository
+     * @var AchievementRepository
      */
     protected $productRepository;
 
@@ -33,7 +33,7 @@ class ProductsCategoriesProxyController extends Controller
      */
     public function __construct(
         CategoryRepository $categoryRepository,
-        ProductRepository $productRepository
+        AchievementRepository $productRepository
     )
     {
         $this->categoryRepository = $categoryRepository;

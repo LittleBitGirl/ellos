@@ -3,7 +3,7 @@
 namespace Webkul\Shop\Http\Controllers;
 
 use Webkul\Customer\Repositories\WishlistRepository;
-use Webkul\Product\Repositories\ProductRepository;
+use Webkul\Product\Repositories\AchievementRepository;
 use Webkul\Checkout\Contracts\Cart as CartModel;
 use Illuminate\Support\Facades\Event;
 use Cart;
@@ -36,12 +36,12 @@ class CartController extends Controller
      * Create a new controller instance.
      *
      * @param  \Webkul\Customer\Repositories\CartItemRepository $wishlistRepository
-     * @param  \Webkul\Product\Repositories\ProductRepository   $productRepository
+     * @param  \Webkul\Product\Repositories\AchievementRepository   $productRepository
      * @return void
      */
     public function __construct(
         WishlistRepository $wishlistRepository,
-        ProductRepository $productRepository
+        AchievementRepository $productRepository
     )
     {
         $this->middleware('customer')->only(['moveToWishlist']);

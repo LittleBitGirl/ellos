@@ -4,10 +4,10 @@
 
 use Faker\Generator as Faker;
 use Webkul\Product\Models\Product;
-use Webkul\Product\Models\ProductAttributeValue;
+use Webkul\Product\Models\AchievementAttributeValue;
 use Webkul\Attribute\Models\AttributeOption;
 
-$factory->defineAs(ProductAttributeValue::class, 'sku', function (Faker $faker) {
+$factory->defineAs(AchievementAttributeValue::class, 'sku', function (Faker $faker) {
     return [
         'product_id'   => function () {
             return factory(Product::class)->create()->id;
@@ -16,7 +16,7 @@ $factory->defineAs(ProductAttributeValue::class, 'sku', function (Faker $faker) 
         'attribute_id' => 1,
     ];
 });
-$factory->defineAs(ProductAttributeValue::class, 'name', function (Faker $faker) {
+$factory->defineAs(AchievementAttributeValue::class, 'name', function (Faker $faker) {
     return [
         'product_id'   => function () {
             return factory(Product::class)->create()->id;
@@ -27,7 +27,7 @@ $factory->defineAs(ProductAttributeValue::class, 'name', function (Faker $faker)
         'attribute_id' => 2,
     ];
 });
-$factory->defineAs(ProductAttributeValue::class, 'url_key', function (Faker $faker) {
+$factory->defineAs(AchievementAttributeValue::class, 'url_key', function (Faker $faker) {
     return [
         'product_id'   => function () {
             return factory(Product::class)->create()->id;
@@ -36,7 +36,7 @@ $factory->defineAs(ProductAttributeValue::class, 'url_key', function (Faker $fak
         'attribute_id' => 3,
     ];
 });
-$factory->defineAs(ProductAttributeValue::class, 'tax_category_id', function (Faker $faker) {
+$factory->defineAs(AchievementAttributeValue::class, 'tax_category_id', function (Faker $faker) {
     return [
         'product_id'    => function () {
             return factory(Product::class)->create()->id;
@@ -46,7 +46,7 @@ $factory->defineAs(ProductAttributeValue::class, 'tax_category_id', function (Fa
         'attribute_id'  => 4,
     ];
 });
-$factory->defineAs(ProductAttributeValue::class, 'new', function (Faker $faker) {
+$factory->defineAs(AchievementAttributeValue::class, 'new', function (Faker $faker) {
     return [
         'product_id'    => function () {
             return factory(Product::class)->create()->id;
@@ -55,7 +55,7 @@ $factory->defineAs(ProductAttributeValue::class, 'new', function (Faker $faker) 
         'attribute_id'  => 5,
     ];
 });
-$factory->defineAs(ProductAttributeValue::class, 'featured', function (Faker $faker) {
+$factory->defineAs(AchievementAttributeValue::class, 'featured', function (Faker $faker) {
     return [
         'product_id'    => function () {
             return factory(Product::class)->create()->id;
@@ -64,7 +64,7 @@ $factory->defineAs(ProductAttributeValue::class, 'featured', function (Faker $fa
         'attribute_id'  => 6,
     ];
 });
-$factory->defineAs(ProductAttributeValue::class, 'visible_individually', function (Faker $faker) {
+$factory->defineAs(AchievementAttributeValue::class, 'visible_individually', function (Faker $faker) {
     return [
         'product_id'    => function () {
             return factory(Product::class)->create()->id;
@@ -73,7 +73,7 @@ $factory->defineAs(ProductAttributeValue::class, 'visible_individually', functio
         'attribute_id'  => 7,
     ];
 });
-$factory->defineAs(ProductAttributeValue::class, 'status', function (Faker $faker) {
+$factory->defineAs(AchievementAttributeValue::class, 'status', function (Faker $faker) {
     return [
         'product_id'    => function () {
             return factory(Product::class)->create()->id;
@@ -82,7 +82,7 @@ $factory->defineAs(ProductAttributeValue::class, 'status', function (Faker $fake
         'attribute_id'  => 8,
     ];
 });
-$factory->defineAs(ProductAttributeValue::class, 'short_description', function (Faker $faker) {
+$factory->defineAs(AchievementAttributeValue::class, 'short_description', function (Faker $faker) {
     return [
         'product_id'   => function () {
             return factory(Product::class)->create()->id;
@@ -93,7 +93,7 @@ $factory->defineAs(ProductAttributeValue::class, 'short_description', function (
         'attribute_id' => 9,
     ];
 });
-$factory->defineAs(ProductAttributeValue::class, 'description', function (Faker $faker) {
+$factory->defineAs(AchievementAttributeValue::class, 'description', function (Faker $faker) {
     return [
         'product_id'   => function () {
             return factory(Product::class)->create()->id;
@@ -104,7 +104,7 @@ $factory->defineAs(ProductAttributeValue::class, 'description', function (Faker 
         'attribute_id' => 10,
     ];
 });
-$factory->defineAs(ProductAttributeValue::class, 'price', function (Faker $faker) {
+$factory->defineAs(AchievementAttributeValue::class, 'price', function (Faker $faker) {
     return [
         'product_id'   => function () {
             return factory(Product::class)->create()->id;
@@ -113,7 +113,7 @@ $factory->defineAs(ProductAttributeValue::class, 'price', function (Faker $faker
         'attribute_id' => 11,
     ];
 });
-$factory->defineAs(ProductAttributeValue::class, 'cost', function (Faker $faker) {
+$factory->defineAs(AchievementAttributeValue::class, 'cost', function (Faker $faker) {
     return [
         'product_id'   => function () {
             return factory(Product::class)->create()->id;
@@ -123,7 +123,7 @@ $factory->defineAs(ProductAttributeValue::class, 'cost', function (Faker $faker)
         'attribute_id' => 12,
     ];
 });
-$factory->defineAs(ProductAttributeValue::class, 'special_price', function (Faker $faker) {
+$factory->defineAs(AchievementAttributeValue::class, 'special_price', function (Faker $faker) {
     return [
         'product_id'   => function () {
             return factory(Product::class)->create()->id;
@@ -132,7 +132,7 @@ $factory->defineAs(ProductAttributeValue::class, 'special_price', function (Fake
         'attribute_id' => 13,
     ];
 });
-$factory->defineAs(ProductAttributeValue::class, 'special_price_from', function (Faker $faker) {
+$factory->defineAs(AchievementAttributeValue::class, 'special_price_from', function (Faker $faker) {
     return [
         'product_id'   => function () {
             return factory(Product::class)->create()->id;
@@ -142,7 +142,7 @@ $factory->defineAs(ProductAttributeValue::class, 'special_price_from', function 
         'attribute_id' => 14,
     ];
 });
-$factory->defineAs(ProductAttributeValue::class, 'special_price_to', function (Faker $faker) {
+$factory->defineAs(AchievementAttributeValue::class, 'special_price_to', function (Faker $faker) {
     return [
         'product_id'   => function () {
             return factory(Product::class)->create()->id;
@@ -152,7 +152,7 @@ $factory->defineAs(ProductAttributeValue::class, 'special_price_to', function (F
         'attribute_id' => 15,
     ];
 });
-$factory->defineAs(ProductAttributeValue::class, 'meta_title', function (Faker $faker) {
+$factory->defineAs(AchievementAttributeValue::class, 'meta_title', function (Faker $faker) {
     return [
         'product_id'   => function () {
             return factory(Product::class)->create()->id;
@@ -163,7 +163,7 @@ $factory->defineAs(ProductAttributeValue::class, 'meta_title', function (Faker $
         'attribute_id' => 16,
     ];
 });
-$factory->defineAs(ProductAttributeValue::class, 'meta_keywords', function (Faker $faker) {
+$factory->defineAs(AchievementAttributeValue::class, 'meta_keywords', function (Faker $faker) {
     return [
         'product_id'   => function () {
             return factory(Product::class)->create()->id;
@@ -174,7 +174,7 @@ $factory->defineAs(ProductAttributeValue::class, 'meta_keywords', function (Fake
         'attribute_id' => 17,
     ];
 });
-$factory->defineAs(ProductAttributeValue::class, 'meta_description', function (Faker $faker) {
+$factory->defineAs(AchievementAttributeValue::class, 'meta_description', function (Faker $faker) {
     return [
         'product_id'   => function () {
             return factory(Product::class)->create()->id;
@@ -185,7 +185,7 @@ $factory->defineAs(ProductAttributeValue::class, 'meta_description', function (F
         'attribute_id' => 18,
     ];
 });
-$factory->defineAs(ProductAttributeValue::class, 'width', function (Faker $faker) {
+$factory->defineAs(AchievementAttributeValue::class, 'width', function (Faker $faker) {
     return [
         'product_id'    => function () {
             return factory(Product::class)->create()->id;
@@ -194,7 +194,7 @@ $factory->defineAs(ProductAttributeValue::class, 'width', function (Faker $faker
         'attribute_id'  => 19,
     ];
 });
-$factory->defineAs(ProductAttributeValue::class, 'height', function (Faker $faker) {
+$factory->defineAs(AchievementAttributeValue::class, 'height', function (Faker $faker) {
     return [
         'product_id'    => function () {
             return factory(Product::class)->create()->id;
@@ -203,7 +203,7 @@ $factory->defineAs(ProductAttributeValue::class, 'height', function (Faker $fake
         'attribute_id'  => 20,
     ];
 });
-$factory->defineAs(ProductAttributeValue::class, 'depth', function (Faker $faker) {
+$factory->defineAs(AchievementAttributeValue::class, 'depth', function (Faker $faker) {
     return [
         'product_id'    => function () {
             return factory(Product::class)->create()->id;
@@ -212,7 +212,7 @@ $factory->defineAs(ProductAttributeValue::class, 'depth', function (Faker $faker
         'attribute_id'  => 21,
     ];
 });
-$factory->defineAs(ProductAttributeValue::class, 'weight', function (Faker $faker) {
+$factory->defineAs(AchievementAttributeValue::class, 'weight', function (Faker $faker) {
     return [
         'product_id'    => function () {
             return factory(Product::class)->create()->id;
@@ -221,7 +221,7 @@ $factory->defineAs(ProductAttributeValue::class, 'weight', function (Faker $fake
         'attribute_id'  => 22,
     ];
 });
-$factory->defineAs(ProductAttributeValue::class, 'color', function (Faker $faker) {
+$factory->defineAs(AchievementAttributeValue::class, 'color', function (Faker $faker) {
     return [
         'product_id'    => function () {
             return factory(Product::class)->create()->id;
@@ -230,7 +230,7 @@ $factory->defineAs(ProductAttributeValue::class, 'color', function (Faker $faker
         'attribute_id'  => 23,
     ];
 });
-$factory->defineAs(ProductAttributeValue::class, 'size', function (Faker $faker) {
+$factory->defineAs(AchievementAttributeValue::class, 'size', function (Faker $faker) {
     return [
         'product_id'    => function () {
             return factory(Product::class)->create()->id;
@@ -239,7 +239,7 @@ $factory->defineAs(ProductAttributeValue::class, 'size', function (Faker $faker)
         'attribute_id'  => 24,
     ];
 });
-$factory->defineAs(ProductAttributeValue::class, 'brand', function (Faker $faker) {
+$factory->defineAs(AchievementAttributeValue::class, 'brand', function (Faker $faker) {
     return [
         'product_id'    => function () {
             return factory(Product::class)->create()->id;
@@ -250,7 +250,7 @@ $factory->defineAs(ProductAttributeValue::class, 'brand', function (Faker $faker
         },
     ];
 });
-$factory->defineAs(ProductAttributeValue::class, 'guest_checkout', function ( Faker $faker) {
+$factory->defineAs(AchievementAttributeValue::class, 'guest_checkout', function (Faker $faker) {
     return [
         'product_id' => function() {
             return factory(Product::class)->create()->id;

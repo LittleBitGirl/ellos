@@ -9,7 +9,7 @@ use Codeception\Module\Laravel5;
 use Illuminate\Support\Facades\Event;
 use Webkul\Product\Models\Product;
 use Webkul\Product\Models\ProductInventory;
-use Webkul\Product\Models\ProductAttributeValue;
+use Webkul\Product\Models\AchievementAttributeValue;
 use Webkul\Product\Models\ProductDownloadableLink;
 use Webkul\Product\Models\ProductDownloadableLinkTranslation;
 
@@ -243,7 +243,7 @@ class Laravel5Helper extends Laravel5
                     $data = [$fieldName => $attributeValues[$attribute]];
                 }
             }
-            $I->have(ProductAttributeValue::class, $data, $attribute);
+            $I->have(AchievementAttributeValue::class, $data, $attribute);
         }
     }
 }

@@ -7,7 +7,7 @@ use Faker\Factory;
 use Faker\Generator;
 use FunctionalTester;
 use Webkul\Product\Models\Product;
-use Webkul\Product\Models\ProductFlat;
+use Webkul\Product\Models\AchievementFlat;
 
 class ProductControllerCest
 {
@@ -56,7 +56,7 @@ class ProductControllerCest
         $I->dontSeeFormErrors();
         $I->seeCurrentRouteIs('admin.catalog.products.index');
         $product = $I->grabRecord(Product::class, ['sku' => $testSku]);
-        $I->seeRecord(ProductFlat::class, [
+        $I->seeRecord(AchievementFlat::class, [
             'sku'               => $testSku,
             'name'              => $testName,
             'description'       => $testDescription,

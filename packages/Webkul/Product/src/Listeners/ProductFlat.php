@@ -6,10 +6,10 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Webkul\Attribute\Repositories\AttributeRepository;
 use Webkul\Attribute\Repositories\AttributeOptionRepository;
-use Webkul\Product\Helpers\ProductType;
+use Webkul\Product\Helpers\AchievementType;
 use Webkul\Product\Repositories\ProductFlatRepository;
 use Webkul\Product\Repositories\ProductAttributeValueRepository;
-use Webkul\Product\Models\ProductAttributeValue;
+use Webkul\Product\Models\AchievementAttributeValue;
 
 /**
  * Product Flat Event handler
@@ -149,7 +149,7 @@ class ProductFlat
     {
         $this->createFlat($product);
 
-        if (ProductType::hasVariants($product->type)) {
+        if (AchievementType::hasVariants($product->type)) {
             foreach ($product->variants()->get() as $variant) {
                 $this->createFlat($variant, $product);
             }
@@ -230,7 +230,7 @@ class ProductFlat
                             }
                         }
 
-                        $productFlat->{$attribute->code} = $productAttributeValue[ProductAttributeValue::$attributeTypeFields[$attribute->type]] ?? null;
+                        $productFlat->{$attribute->code} = $productAttributeValue[AchievementAttributeValue::$attributeTypeFields[$attribute->type]] ?? null;
 
                         if ($attribute->type == 'select') {
                             $attributeOption = $this->attributeOptionRepository->find($product->{$attribute->code});

@@ -201,7 +201,7 @@ return [
             'all' => 'الكل'
         ],
         'users' => [
-            'title' => 'User',
+            'title' => 'Admin',
             'add-user-title' => 'إضافة مستخدم',
             'edit-user-title' => 'حرر المستخدم',
             'save-btn-title' => 'احفظ المستخدم',

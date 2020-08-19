@@ -3,9 +3,9 @@
 namespace Webkul\Product\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Webkul\Product\Contracts\ProductFlat as ProductFlatContract;
+use Webkul\Product\Contracts\AchievementFlat as ProductFlatContract;
 
-class ProductFlat extends Model implements ProductFlatContract
+class AchievementFlat extends Model implements ProductFlatContract
 {
     protected $table = 'product_flat';
 

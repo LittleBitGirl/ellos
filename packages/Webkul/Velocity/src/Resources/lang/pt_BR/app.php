@@ -54,7 +54,7 @@ return [
         'page-lost-description' => "A página que você está procurando não está disponível. Tente pesquisar novamente ou use o botão Voltar atrás abaixo.",
     ],
 
-    'home' => [
+    'HomeController' => [
         'view-all' => 'Ver tudo',
         'add-to-cart' => 'Adicionar ao carrinho',
         'hot-categories' => 'Categorias quentes',

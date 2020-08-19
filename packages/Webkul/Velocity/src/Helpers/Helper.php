@@ -9,7 +9,7 @@ use Webkul\Velocity\Repositories\OrderBrandsRepository;
 use Webkul\Product\Repositories\ProductReviewRepository;
 use Webkul\Velocity\Repositories\VelocityMetadataRepository;
 use Webkul\Attribute\Repositories\AttributeOptionRepository;
-use Webkul\Product\Repositories\ProductRepository as ProductRepository;
+use Webkul\Product\Repositories\AchievementRepository as ProductRepository;
 
 class Helper extends Review
 {
@@ -57,7 +57,7 @@ class Helper extends Review
 
     public function __construct(
         ProductModel $productModel,
-        ProductRepository $productRepository,
+        AchievementRepository $productRepository,
         AttributeOptionRepository $attributeOption,
         OrderBrandsRepository $orderBrandsRepository,
         ProductReviewRepository $productReviewRepository,

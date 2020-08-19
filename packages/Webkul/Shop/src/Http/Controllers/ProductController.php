@@ -3,7 +3,7 @@
 namespace Webkul\Shop\Http\Controllers;
 
 use Illuminate\Support\Facades\Storage;
-use Webkul\Product\Repositories\ProductRepository;
+use Webkul\Product\Repositories\AchievementRepository;
 use Webkul\Product\Repositories\ProductAttributeValueRepository;
 use Webkul\Product\Repositories\ProductDownloadableSampleRepository;
 use Webkul\Product\Repositories\ProductDownloadableLinkRepository;
@@ -47,14 +47,14 @@ class ProductController extends Controller
     /**
      * Create a new controller instance.
      *
-     * @param  \Webkul\Product\Repositories\ProductRepository                   $productRepository
+     * @param  \Webkul\Product\Repositories\AchievementRepository                   $productRepository
      * @param  \Webkul\Product\Repositories\productAttributeValueRepository     $productAttributeValueRepository
      * @param  \Webkul\Product\Repositories\ProductDownloadableSampleRepository $productDownloadableSampleRepository
      * @param  \Webkul\Product\Repositories\ProductDownloadableLinkRepository   $productDownloadableLinkRepository
      * @return void
      */
     public function __construct(
-        ProductRepository $productRepository,
+        AchievementRepository $productRepository,
         ProductAttributeValueRepository $productAttributeValueRepository,
         ProductDownloadableSampleRepository $productDownloadableSampleRepository,
         ProductDownloadableLinkRepository $productDownloadableLinkRepository

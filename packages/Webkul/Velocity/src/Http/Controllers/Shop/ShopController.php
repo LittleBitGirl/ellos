@@ -6,7 +6,7 @@ use Cart;
 use Webkul\Velocity\Http\Shop\Controllers;
 use Webkul\Checkout\Contracts\Cart as CartModel;
 use Webkul\Product\Repositories\SearchRepository;
-use Webkul\Product\Repositories\ProductRepository;
+use Webkul\Product\Repositories\AchievementRepository;
 use Webkul\Velocity\Repositories\Product\ProductRepository as VelocityProductRepository;
 
 /**
@@ -34,14 +34,14 @@ use Webkul\Velocity\Repositories\Product\ProductRepository as VelocityProductRep
     /**
      * ProductRepository object
      *
-     * @var ProductRepository
+     * @var AchievementRepository
      */
     protected $productRepository;
 
     /**
      * ProductRepository object of velocity package
      *
-     * @var ProductRepository
+     * @var AchievementRepository
      */
     protected $velocityProductRepository;
 
@@ -53,7 +53,7 @@ use Webkul\Velocity\Repositories\Product\ProductRepository as VelocityProductRep
     */
     public function __construct(
         SearchRepository $searchRepository,
-        ProductRepository $productRepository,
+        AchievementRepository $productRepository,
         VelocityProductRepository $velocityProductRepository
     ) {
         $this->_config = request('_config');

@@ -5,7 +5,7 @@ namespace Webkul\Product\Providers;
 use Illuminate\Database\Eloquent\Factory as EloquentFactory;
 use Illuminate\Support\ServiceProvider;
 use Webkul\Product\Models\ProductProxy;
-use Webkul\Product\Observers\ProductObserver;
+use Webkul\Product\Observers\AchievementObserver;
 use Webkul\Product\Console\Commands\PriceUpdate;
 
 class ProductServiceProvider extends ServiceProvider
@@ -27,7 +27,7 @@ class ProductServiceProvider extends ServiceProvider
             dirname(__DIR__) . '/Config/imagecache.php' => config_path('imagecache.php'),
         ]);
 
-        ProductProxy::observe(ProductObserver::class);
+        ProductProxy::observe(AchievementObserver::class);
     }
 
     /**

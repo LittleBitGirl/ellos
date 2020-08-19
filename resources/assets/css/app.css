@@ -1,9 +1,28 @@
 .bigger-logo {
-    width: 220px!important;
-    height: 47px!important;
+    width: 220px !important;
+    height: 47px !important;
     margin-bottom: -13px;
 }
-.header .header-top div.left-content ul.logo-container li img{
-    max-width: 220px!important;
-    max-height: 50px!important;
+
+.header .header-top div.left-content ul.logo-container li img {
+    max-width: 220px !important;
+    max-height: 50px !important;
+}
+
+.click-to {
+    width: 100%;
+    height: 100%;
+}
+
+.hyperlink {
+    width: 100%;
+    height: 100%;
+}
+
+.category-nav-link {
+    text-transform: none !important;
+}
+
+.category-nav{
+    width: 100%;
 }

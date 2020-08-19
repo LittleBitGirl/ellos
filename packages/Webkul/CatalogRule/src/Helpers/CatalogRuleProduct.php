@@ -4,8 +4,8 @@ namespace Webkul\CatalogRule\Helpers;
 
 use Carbon\Carbon;
 use Webkul\Attribute\Repositories\AttributeRepository;
-use Webkul\Product\Repositories\ProductRepository;
-use Webkul\Product\Models\ProductAttributeValue;
+use Webkul\Product\Repositories\AchievementRepository;
+use Webkul\Product\Models\AchievementAttributeValue;
 use Webkul\CatalogRule\Repositories\CatalogRuleProductRepository;
 use Webkul\Rule\Helpers\Validator;
 
@@ -21,7 +21,7 @@ class CatalogRuleProduct
     /**
      * ProductRepository object
      *
-     * @var ProductRepository
+     * @var AchievementRepository
      */
     protected $productRepository;
 
@@ -50,7 +50,7 @@ class CatalogRuleProduct
      */
     public function __construct(
         AttributeRepository $attributeRepository,
-        ProductRepository $productRepository,
+        AchievementRepository $productRepository,
         CatalogRuleProductRepository $catalogRuleProductRepository,
         Validator $validator
     )
@@ -192,7 +192,7 @@ class CatalogRuleProduct
                     ->where('pav_' . $attribute->code . '.attribute_id', $attribute->id);
         });
 
-        $query = $query->addSelect('pav_' . $attribute->code . '.' . ProductAttributeValue::$attributeTypeFields[$attribute->type] . ' as ' . $attribute->code);
+        $query = $query->addSelect('pav_' . $attribute->code . '.' . AchievementAttributeValue::$attributeTypeFields[$attribute->type] . ' as ' . $attribute->code);
 
         return $query;
     }

@@ -327,7 +327,7 @@ class Product extends Model implements ProductContract
             }
         }
 
-        return $attributeValue[ProductAttributeValue::$attributeTypeFields[$attribute->type]] ?? null;
+        return $attributeValue[AchievementAttributeValue::$attributeTypeFields[$attribute->type]] ?? null;
     }
 
     /**

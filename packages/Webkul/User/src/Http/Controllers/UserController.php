@@ -102,7 +102,7 @@ class UserController extends Controller
 
         Event::dispatch('user.admin.create.after', $admin);
 
-        session()->flash('success', trans('admin::app.response.create-success', ['name' => 'User']));
+        session()->flash('success', trans('admin::app.response.create-success', ['name' => 'Admin']));
 
         return redirect()->route($this->_config['redirect']);
     }
@@ -151,7 +151,7 @@ class UserController extends Controller
 
         Event::dispatch('user.admin.update.after', $admin);
 
-        session()->flash('success', trans('admin::app.response.update-success', ['name' => 'User']));
+        session()->flash('success', trans('admin::app.response.update-success', ['name' => 'Admin']));
 
         return redirect()->route($this->_config['redirect']);
     }

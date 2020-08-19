@@ -1,4 +1,4 @@
-@if (app('Webkul\Product\Repositories\ProductRepository')->getFeaturedProducts()->count())
+@if (app('Webkul\Product\Repositories\AchievementRepository')->getFeaturedProducts()->count())
     <section class="featured-products">
 
         <div class="featured-heading">
@@ -9,7 +9,7 @@
 
         <div class="featured-grid product-grid-4">
 
-            @foreach (app('Webkul\Product\Repositories\ProductRepository')->getFeaturedProducts() as $productFlat)
+            @foreach (app('Webkul\Product\Repositories\AchievementRepository')->getFeaturedProducts() as $productFlat)
 
                 @include ('shop::products.list.card', ['product' => $productFlat])
 

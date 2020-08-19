@@ -3,10 +3,10 @@
 namespace Webkul\Product\Http\Controllers;
 
 use Illuminate\Support\Facades\Event;
-use Webkul\Product\Http\Requests\ProductForm;
-use Webkul\Product\Helpers\ProductType;
+use Webkul\Product\Http\Requests\AchievementForm;
+use Webkul\Product\Helpers\AchievementType;
 use Webkul\Category\Repositories\CategoryRepository;
-use Webkul\Product\Repositories\ProductRepository;
+use Webkul\Product\Repositories\AchievementRepository;
 use Webkul\Product\Repositories\ProductDownloadableLinkRepository;
 use Webkul\Product\Repositories\ProductDownloadableSampleRepository;
 use Webkul\Attribute\Repositories\AttributeFamilyRepository;
@@ -74,7 +74,7 @@ class ProductController extends Controller
      * Create a new controller instance.
      *
      * @param  \Webkul\Category\Repositories\CategoryRepository                 $categoryRepository
-     * @param  \Webkul\Product\Repositories\ProductRepository                   $productRepository
+     * @param  \Webkul\Product\Repositories\AchievementRepository                   $productRepository
      * @param  \Webkul\Product\Repositories\ProductDownloadableLinkRepository   $productDownloadableLinkRepository
      * @param  \Webkul\Product\Repositories\ProductDownloadableSampleRepository $productDownloadableSampleRepository
      * @param  \Webkul\Attribute\Repositories\AttributeFamilyRepository         $attributeFamilyRepository
@@ -83,7 +83,7 @@ class ProductController extends Controller
      */
     public function __construct(
         CategoryRepository $categoryRepository,
-        ProductRepository $productRepository,
+        AchievementRepository $productRepository,
         ProductDownloadableLinkRepository $productDownloadableLinkRepository,
         ProductDownloadableSampleRepository $productDownloadableSampleRepository,
         AttributeFamilyRepository $attributeFamilyRepository,
@@ -141,13 +141,13 @@ class ProductController extends Controller
     public function store()
     {
         if (! request()->get('family')
-            && ProductType::hasVariants(request()->input('type'))
+            && AchievementType::hasVariants(request()->input('type'))
             && request()->input('sku') != '') {
 
             return redirect(url()->current() . '?type=' . request()->input('type') . '&family=' . request()->input('attribute_family_id') . '&sku=' . request()->input('sku'));
         }
 
-        if (ProductType::hasVariants(request()->input('type'))
+        if (AchievementType::hasVariants(request()->input('type'))
             && (! request()->has('super_attributes')
             || ! count(request()->get('super_attributes')))) {
 
@@ -188,11 +188,11 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Webkul\Product\Http\Requests\ProductForm $request
+     * @param  \Webkul\Product\Http\Requests\AchievementForm $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(ProductForm $request, $id)
+    public function update(AchievementForm $request, $id)
     {
         $product = $this->productRepository->update(request()->all(), $id);
         session()->flash('success', trans('admin::app.response.update-success', ['name' => 'Product']));

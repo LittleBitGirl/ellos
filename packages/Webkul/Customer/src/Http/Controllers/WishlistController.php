@@ -2,7 +2,7 @@
 
 namespace Webkul\Customer\Http\Controllers;
 
-use Webkul\Product\Repositories\ProductRepository;
+use Webkul\Product\Repositories\AchievementRepository;
 use Webkul\Customer\Repositories\WishlistRepository;
 use Cart;
 
@@ -40,12 +40,12 @@ class WishlistController extends Controller
      * Create a new controller instance.
      *
      * @param  \Webkul\Customer\Repositories\WishlistRepository $wishlistRepository
-     * @param  \Webkul\Product\Repositories\ProductRepository   $productRepository
+     * @param  \Webkul\Product\Repositories\AchievementRepository   $productRepository
      * @return void
      */
     public function __construct(
         WishlistRepository $wishlistRepository,
-        ProductRepository $productRepository
+        AchievementRepository $productRepository
     )
     {
         $this->middleware('customer');

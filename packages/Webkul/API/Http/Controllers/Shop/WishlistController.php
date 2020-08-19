@@ -4,7 +4,7 @@ namespace Webkul\API\Http\Controllers\Shop;
 
 use Illuminate\Support\Facades\Event;
 use Webkul\Customer\Repositories\WishlistRepository;
-use Webkul\Product\Repositories\ProductRepository;
+use Webkul\Product\Repositories\AchievementRepository;
 use Webkul\API\Http\Resources\Customer\Wishlist as WishlistResource;
 use Webkul\API\Http\Resources\Checkout\Cart as CartResource;
 use Cart;
@@ -37,7 +37,7 @@ class WishlistController extends Controller
      */
     public function __construct(
         WishlistRepository $wishlistRepository,
-        ProductRepository $productRepository
+        AchievementRepository $productRepository
     )
     {
         $this->guard = request()->has('token') ? 'api' : 'customer';

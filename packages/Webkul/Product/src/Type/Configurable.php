@@ -2,8 +2,8 @@
 
 namespace Webkul\Product\Type;
 
-use Webkul\Product\Models\ProductAttributeValue;
-use Webkul\Product\Models\ProductFlat;
+use Webkul\Product\Models\AchievementAttributeValue;
+use Webkul\Product\Models\AchievementFlat;
 use Illuminate\Support\Str;
 
 /**
@@ -247,7 +247,7 @@ class Configurable extends AbstractType
                     ]);
             } else {
                 $this->attributeValueRepository->update([
-                    ProductAttributeValue::$attributeTypeFields[$attribute->type] => $data[$attribute->code]
+                    AchievementAttributeValue::$attributeTypeFields[$attribute->type] => $data[$attribute->code]
                 ], $attributeValue->id);
             }
         }
@@ -344,7 +344,7 @@ class Configurable extends AbstractType
     {
         $minPrices = [];
 
-        $result = ProductFlat::join('products', 'product_flat.product_id', '=', 'products.id')
+        $result = AchievementFlat::join('products', 'product_flat.product_id', '=', 'products.id')
             ->distinct()
             ->where('products.parent_id', $this->product->id)
             ->selectRaw('IF( product_flat.special_price_from IS NOT NULL
@@ -371,7 +371,7 @@ class Configurable extends AbstractType
      */
     public function getMaximamPrice()
     {
-        $productFlat = ProductFlat::join('products', 'product_flat.product_id', '=', 'products.id')
+        $productFlat = AchievementFlat::join('products', 'product_flat.product_id', '=', 'products.id')
             ->distinct()
             ->where('products.parent_id', $this->product->id)
             ->selectRaw('MAX(product_flat.price) AS max_price')
@@ -463,7 +463,7 @@ class Configurable extends AbstractType
      */
     public function getAdditionalOptions($data)
     {
-        $childProduct = app('Webkul\Product\Repositories\ProductRepository')->findOneByField('id', $data['selected_configurable_option']);
+        $childProduct = app('Webkul\Product\Repositories\AchievementRepository')->findOneByField('id', $data['selected_configurable_option']);
 
         foreach ($this->product->super_attributes as $attribute) {
             $option = $attribute->options()->where('id', $childProduct->{$attribute->code})->first();

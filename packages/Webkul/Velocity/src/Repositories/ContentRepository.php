@@ -5,7 +5,7 @@ namespace Webkul\Velocity\Repositories;
 use Illuminate\Container\Container as App;
 use Webkul\Core\Eloquent\Repository;
 use Illuminate\Support\Facades\Event;
-use Webkul\Product\Repositories\ProductRepository;
+use Webkul\Product\Repositories\AchievementRepository;
 
 /**
  * Content Reposotory
@@ -29,7 +29,7 @@ class ContentRepository extends Repository
      * @return void
      */
     public function __construct(
-        ProductRepository $productRepository,
+        AchievementRepository $productRepository,
         App $app
         )
     {

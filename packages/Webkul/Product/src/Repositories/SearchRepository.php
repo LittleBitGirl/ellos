@@ -4,7 +4,7 @@ namespace Webkul\Product\Repositories;
 
 use Illuminate\Container\Container as App;
 use Webkul\Core\Eloquent\Repository;
-use Webkul\Product\Repositories\ProductRepository;
+use Webkul\Product\Repositories\AchievementRepository;
 
 /**
  * Search Reposotory
@@ -28,7 +28,7 @@ class SearchRepository extends Repository
      * @return void
      */
     public function __construct(
-        ProductRepository $productRepository,
+        AchievementRepository $productRepository,
         App $app
     )
     {

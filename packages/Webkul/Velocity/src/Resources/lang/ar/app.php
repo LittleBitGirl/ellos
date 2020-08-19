@@ -54,7 +54,7 @@ return [
         'page-lost-description' => "الصفحة التي تبحث عنها غير متوفرة. حاول البحث مرة أخرى أو استخدم زر العودة للخلف أدناه.",
     ],
 
-    'home' => [
+    'HomeController' => [
         'view-all' => 'عرض الكل',
         'add-to-cart' => 'أضف إلى السلة',
         'payment-methods' => 'طرق الدفع',

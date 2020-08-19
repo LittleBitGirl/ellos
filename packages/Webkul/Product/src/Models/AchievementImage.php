@@ -4,9 +4,9 @@ namespace Webkul\Product\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
-use Webkul\Product\Contracts\ProductImage as ProductImageContract;
+use Webkul\Product\Contracts\AchievementImage as ProductImageContract;
 
-class ProductImage extends Model implements ProductImageContract
+class AchievementImage extends Model implements ProductImageContract
 {
     public $timestamps = false;
 

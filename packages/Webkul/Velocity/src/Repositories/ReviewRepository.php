@@ -4,7 +4,7 @@ namespace Webkul\Velocity\Repositories;
 
 use Illuminate\Container\Container as App;
 use Webkul\Core\Eloquent\Repository;
-use Webkul\Product\Repositories\ProductRepository;
+use Webkul\Product\Repositories\AchievementRepository;
 
 /**
  * Review Reposotory
@@ -27,7 +27,7 @@ class ReviewRepository extends Repository
      * @return void
      */
     public function __construct(
-        ProductRepository $product,
+        AchievementRepository $product,
         App $app)
     {
         $this->product = $product;

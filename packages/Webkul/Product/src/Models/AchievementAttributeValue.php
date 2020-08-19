@@ -5,9 +5,9 @@ namespace Webkul\Product\Models;
 use Illuminate\Database\Eloquent\Model;
 use Webkul\Attribute\Models\AttributeProxy;
 use Webkul\Channel\Models\ChannelProxy;
-use Webkul\Product\Contracts\ProductAttributeValue as ProductAttributeValueContract;
+use Webkul\Product\Contracts\AchievementAttributeValue as ProductAttributeValueContract;
 
-class ProductAttributeValue extends Model implements ProductAttributeValueContract
+class AchievementAttributeValue extends Model implements ProductAttributeValueContract
 {
     public $timestamps = false;
 

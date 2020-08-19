@@ -2,7 +2,7 @@
 
 namespace Webkul\Shop\Http\Controllers;
 
-use Webkul\Product\Repositories\ProductRepository;
+use Webkul\Product\Repositories\AchievementRepository;
 use Webkul\Product\Repositories\ProductReviewRepository;
 
 /**
@@ -30,12 +30,12 @@ class ReviewController extends Controller
     /**
      * Create a new controller instance.
      *
-     * @param  \Webkul\Product\Repositories\ProductRepository        $productRepository
+     * @param  \Webkul\Product\Repositories\AchievementRepository        $productRepository
      * @param  \Webkul\Product\Repositories\ProductReviewRepository  $productReviewRepository
      * @return void
      */
     public function __construct(
-        ProductRepository $productRepository,
+        AchievementRepository $productRepository,
         ProductReviewRepository $productReviewRepository
     ) {
         $this->productRepository = $productRepository;

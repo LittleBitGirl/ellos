@@ -3,7 +3,7 @@
 namespace Webkul\API\Http\Resources\Catalog;
 
 use Illuminate\Http\Resources\Json\JsonResource;
-use Webkul\Product\Helpers\ProductType;
+use Webkul\Product\Helpers\AchievementType;
 
 class Product extends JsonResource
 {
